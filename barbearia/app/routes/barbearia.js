@@ -3,10 +3,10 @@ const router = express.Router();
 const { setBarbearia, getBarbearia, generateExcel } = require('../controller/barbearia')
 const cors = require('cors')
 
-router.post('/cadastrar', cors(), setBarbearia);
+router.post('/barbearia', cors(), setBarbearia);
 
-router.get('/', getBarbearia);
+router.get('/barbearia', getBarbearia);
 
-router.get('/excel', generateExcel);
+router.get('/barbearia/excel', generateExcel);
 
 module.exports = router;
