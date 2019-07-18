@@ -8,6 +8,16 @@ function msg(status, msg) {
   }
 }
 
+const apagarDados = (req, res, next) => {
+  barbearia.remove()
+    .then(() => {
+      res.status(200).send(msg(200, "Dados apagados com sucesso"))
+    })
+    .catch(() => {
+      return res.status(400).send(msg(400, "Erro ao apagar"))
+    })
+}
+
 const setBarbearia = (req, res, next) => {
   const { cortes, bebidas, produtos } = req.body
 
@@ -245,5 +255,6 @@ const generateExcel = (req, res, next) => {
 module.exports = {
   setBarbearia,
   getBarbearia,
-  generateExcel
+  generateExcel,
+  apagarDados
 }

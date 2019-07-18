@@ -6,8 +6,19 @@ var logger = require('morgan');
 
 var indexRouter = require('./app/routes/index');
 var barbeariaRouter = require('./app/routes/barbearia');
-
+const cors = require('cors')
 var app = express();
+
+app.use(cors())
+
+/**
+ * Create conection database.
+ */
+const mongoose = require('./config/database')
+if(!mongoose.connect){
+  console.log('ERROR: Banco de dados desconectado...')
+}
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));

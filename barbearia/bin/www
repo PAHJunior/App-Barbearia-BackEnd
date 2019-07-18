@@ -16,14 +16,6 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
- * Create conection database.
- */
-const mongoose = require('../config/database')
-if(!mongoose.connect){
-  console.log('ERROR: Banco de dados desconectado...')
-}
-
-/**
  * Create HTTP server.
  */
 
