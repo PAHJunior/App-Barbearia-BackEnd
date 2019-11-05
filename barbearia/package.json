@@ -13,7 +13,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "mongodb": "^3.2.7",
-    "mongoose": "^5.5.14",
+    "mongoose": "^5.7.5",
     "morgan": "~1.9.1",
     "node-excel-export": "^1.4.4",
     "nodemon": "^1.19.1",
