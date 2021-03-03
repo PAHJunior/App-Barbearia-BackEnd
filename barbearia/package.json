@@ -17,6 +17,6 @@
     "morgan": "~1.9.1",
     "node-excel-export": "^1.4.4",
     "nodemon": "^1.19.1",
-    "pug": "2.0.0-beta11"
+    "pug": "3.0.1"
   }
 }
